@@ -1,11 +1,21 @@
+// navbar customizations
 $navbar-inverse-bg:		#e67e22;
 $navbar-inverse-link-color:	black;
 
+// main body customizations
+$brand-primary: #2980b9;
 $body-bg: 		#bdc3c7;
 $jumbotron-bg:	#ecf0f1;
-
-$brand-primary: #2980b9;
-
-
+$btn-default-bg: #e67e22;
+$btn-default-color: black;
 
 @import 'bootstrap';
+
+// css overrides
+.right {
+	text-align: right;
+}
+
+.center {
+	text-align: center;
+}

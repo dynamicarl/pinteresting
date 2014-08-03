@@ -1,3 +1,7 @@
+2014-08-03 - 18:43
+adjusted layout of home.html.erb; added login button
+adjusted color scheme a bit
+
 2014-08-03 - 18:24
 updated ui color scheme
 moved footer out to _footer.html.erb; changed layout
