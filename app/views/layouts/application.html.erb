@@ -5,13 +5,18 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	
-	<%= link_to "Home", root_path %>
-	<%= link_to "About Us", about_path %>
-	
-	<%= yield %>
+
+	<%= render 'layouts/header' %>
+	</nav>
+	<div class="container">
+		<%= yield %>
+	</div>
 
 </body>
+<footer>
+	<p><%= link_to "Dynamicarl.com", "http://dynamicarl.com", class: "panel panel-body" %></p>
+</footer>
 </html>
