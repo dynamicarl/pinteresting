@@ -1,7 +1,15 @@
+2014-08-03 - 
+setting up authentication...
+
+
 2014-08-03 - 18:56
 first heroku push..
 - adding pg, ruby_12factor gems
 - added :production, :test, :development groups to gemfile
+- ran bundle install
+- app pushed at omr-dynamicarl-pinteresting
+specify ruby version in gemfile
+
 
 2014-08-03 - 18:43
 adjusted layout of home.html.erb; added login button

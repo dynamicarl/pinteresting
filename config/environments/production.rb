@@ -79,4 +79,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # required for devise
+  # need to set this to the hostname of our application
+  config.action_mailer.default_url_options = { :host => 'omr-pinteresting.dynamicarl.com'}
 end
