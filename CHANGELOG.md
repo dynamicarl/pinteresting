@@ -1,3 +1,11 @@
+2014-08-17 - 
+~ added association: :user has_many :pins; :pin belongs_to :user
+~ pins/new, pins/create now use current_user.pins.build to instantiate objects, setting user_id field
+~ added authentication mechanisms to pins_controller.rb - checks user_id/current_user on edit/destroy actions
+~ updated pins/index to prompt for login before creating pins, hide functions not allowed to current user
+~ updated home page: when logged in, primary button will take you to /pins list
+~ pins/show - hides edit option unless pin belongs to current_user
+
 2014-08-17 - 16:26
 + added scaffold: pins
 ~ pins/_form - all pins display a panel

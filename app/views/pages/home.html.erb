@@ -1,7 +1,7 @@
 <div class="jumbotron center">
 	<h1>App Home Page </h1>
 	<% if user_signed_in? %>
-		#placeholder
+		<%= link_to "View Pins", pins_path, class: "btn btn-primary" %>
 	<% else %>
 		<p>
 			<%= link_to "Log In", new_user_session_path, class: "btn btn-default" %>
