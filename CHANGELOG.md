@@ -1,5 +1,14 @@
-2014-08-03 - 
+2014-08-17 - 13:57
+! renamed migrate file to include .rb extension; previous migrate failed
+- migrated db to include new model
+- added sign-in code to main page
+- changed flash display message tag to work with bootstrap better
+
+2014-08-03 - 21:21
 setting up authentication...
+setting up devise
+- new model 'user'
+
 
 
 2014-08-03 - 18:56
