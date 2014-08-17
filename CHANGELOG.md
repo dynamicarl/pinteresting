@@ -1,3 +1,11 @@
+2014-08-17 - 16:26
++ added scaffold: pins
+~ pins/_form - all pins display a panel
+~ updated views to include panel elements for: pins/new, pins/edit, pins/show
+~ wrapped pins/index data into a table
++ pins/index: displays pin.id as the first column in the table
++ pins/show: displays pin.id as the header for the panel
+
 2014-08-17 - 14:44
 ~ updated formatting for devise auth pages: new_reg, new_sessions, edit_registration
 ~ _footer - hid contents; overkill with devise
