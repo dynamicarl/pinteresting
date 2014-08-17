@@ -1,4 +1,4 @@
-2014-08-17 - 
+2014-08-17 - 17:28
 ~ added association: :user has_many :pins; :pin belongs_to :user
 ~ pins/new, pins/create now use current_user.pins.build to instantiate objects, setting user_id field
 ~ added authentication mechanisms to pins_controller.rb - checks user_id/current_user on edit/destroy actions
