@@ -1,5 +1,11 @@
+2014-08-17 - 14:44
+~ updated formatting for devise auth pages: new_reg, new_sessions, edit_registration
+~ _footer - hid contents; overkill with devise
+~ _header - added sign in, sign out, account settings links (context-sensitive)
+~ _header - now hide the "Why?" link when logged in to save space
+
 2014-08-17 - 13:57
-! renamed migrate file to include .rb extension; previous migrate failed
+!~ renamed migrate file to include .rb extension; previous migrate failed
 - migrated db to include new model
 - added sign-in code to main page
 - changed flash display message tag to work with bootstrap better
