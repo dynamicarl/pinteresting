@@ -1,3 +1,7 @@
+2014-08-19 - 23:07
+~ gemfile: added aws-sdk
+~ config/environments/production.rb: added support for aws s3 storage of images
+
 2014-08-19 - 22:40
 !! no backend storage configured; will fail to keep images, when pushed to host
 + new migration: 20140820015917_add_attachment_image_to_pins

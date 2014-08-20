@@ -39,9 +39,12 @@ gem 'devise', '~> 3.1.0.rc2'
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
+# front-end templates
 gem 'bootstrap-sass'
 
+#image management and storage
 gem 'paperclip', github: 'thoughtbot/paperclip'
+gem 'aws-sdk', '~> 1.20.0'
 
 group :development, :test do 
 	# Use sqlite3 as the database for Active Record

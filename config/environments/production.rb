@@ -83,4 +83,14 @@ Rails.application.configure do
   # required for devise
   # need to set this to the hostname of our application
   config.action_mailer.default_url_options = { :host => 'omr-pinteresting.dynamicarl.com'}
+
+  # aws-s3 support for paperclip
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => ENV['AWS_BUCKET'],
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+    }
+  }
 end
