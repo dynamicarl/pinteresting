@@ -1,43 +1,20 @@
-<h1>Listing pins</h1>
-
-<table class="table table-striped table-condensed table-responsive">
-  <thead>
-    <tr>
-      <th>Image</th>
-      <th>Pin #</th>
-      <th>Description</th>
-      <th>User</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @pins.each do |pin| %>
-      <tr>
-        <td> <%= image_tag pin.image.url(:medium) %>
-        <td><%= pin.id %></td>
-        <td><%= pin.description %></td>
-        <td><%= pin.user.try(:email) %></td>
-        <td><%= link_to 'Show', pin %></td>
-        <td>
+<div id="pins" class="transitions-enabled">
+  <% @pins.each do |pin| %>
+      <div class="box panel panel-default">
+        <%= image_tag pin.image.url(:medium) %>
+        <div class="panel-body">
+          <%= pin.id %>
+          <%= pin.description %>
+          <%= pin.user.try(:email) %>
+          <%= link_to 'Show', pin %>
+          
           <% if pin.user == current_user %>
             <%= link_to 'Edit', edit_pin_path(pin) %>
           <% end %>
-        </td>
-        <td>
           <% if pin.user == current_user %>
-                <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
+                  <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
           <% end %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-<% if user_signed_in? %>
-  <%= link_to 'New Pin', new_pin_path, class: "btn btn-primary" %>
-<% else %>
-  <%= link_to 'Sign in to add pins', user_session_path, class: "btn btn-primary" %>
-
-<% end %>
+        </div>
+      </div>
+  <% end %>
+</div>

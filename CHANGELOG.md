@@ -1,3 +1,8 @@
+2014-08-19 - 
+~ gemfile: added masonry-rails, jQuery-turbolinks
+~ set up jquery/masonry tags across application; changes to app/assets/javascrips/application.js + pins.js.coffee;
+	index.html.erb, _form.html.erb, _header.html.erb
+
 2014-08-19 - 23:07
 ~ gemfile: added aws-sdk
 ~ config/environments/production.rb: added support for aws s3 storage of images
