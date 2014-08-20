@@ -1,3 +1,14 @@
+2014-08-19 - 22:40
+!! no backend storage configured; will fail to keep images, when pushed to host
++ new migration: 20140820015917_add_attachment_image_to_pins
+~ gemfile: added new gem paperclip; had to side-load from github repo to work around compatibility issue
+~ added image to Pin object; had to add validation to work around another compatibility issue
+~ app/views/pins/_form.html.erb: added display code for images
+~ app/controllers/pins_controller.rb: allowed editing of :image on Pin
+~ app/views/pins/show.html.erb: displays the image below the description
+~ app/views/pins/index.html.erb: shows (:medium) image in first column on table
+~ config/initializers/mime_types.rb: added workaround for Win8/paperclip 3.x compatibility; bypasses spoof checks
+
 2014-08-17 - 17:28
 ~ added association: :user has_many :pins; :pin belongs_to :user
 ~ pins/new, pins/create now use current_user.pins.build to instantiate objects, setting user_id field
