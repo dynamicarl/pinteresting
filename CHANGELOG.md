@@ -1,4 +1,7 @@
-2014-08-19 - 
+2014-08-20 - 00:25
+added some additional formatting on the pins/index and pins/show pages
+
+2014-08-19 - 23:51
 ~ gemfile: added masonry-rails, jQuery-turbolinks
 ~ set up jquery/masonry tags across application; changes to app/assets/javascrips/application.js + pins.js.coffee;
 	index.html.erb, _form.html.erb, _header.html.erb

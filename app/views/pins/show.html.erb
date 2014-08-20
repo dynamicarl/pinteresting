@@ -1,18 +1,23 @@
 <p id="notice"><%= notice %></p>
+<%= link_to 'Back', pins_path %>
+<% if @pin.user == current_user %>
+	| <%= link_to 'Edit', edit_pin_path(@pin) %>
+<% end %>
 
-
-<p><div class="panel panel-default">
-		<div class="panel-heading"><h1>Pin #<%= @pin.id %></h1></div>
-		<div class="panel-body">
-			<strong>Description:</strong>
-		  	<%= @pin.description %>
-	  	</div>
+<div class="row-fluid">
+	<div class="col-md-offset-2 col-md-8">
+		<p><div class="panel panel-default">
+				<div class="panel-heading"><h1><%= @pin.description %></h1></div>
+				<div class="panel-body">
+					<p><strong>From User:</strong> <%= @pin.user.email%></p>
+			  		<%= image_tag @pin.image.url %>
+			  	</div>
+			  	<div class="panel-footer">
+		  			Pin #<%= @pin.id %>
+		  		</div>
+			</div>
+		</p>
+		
 	</div>
-</p>
-<%= image_tag @pin.image.url %>
-<div class="panel-footer">
-	<% if @pin.user == current_user %>
-		<%= link_to 'Edit', edit_pin_path(@pin) %> |
-	<% end %>
-	<%= link_to 'Back', pins_path %>
 </div>
+
